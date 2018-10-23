@@ -1,0 +1,165 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Getting Started · ListApp</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## 1. Install Wordpress templates"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Getting Started · ListApp"/><meta property="og:type" content="website"/><meta property="og:url" content="https://inspireui.io/listapp/index.html"/><meta property="og:description" content="## 1. Install Wordpress templates"/><meta property="og:image" content="https://inspireui.io/listapp/img/spotui.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://inspireui.io/listapp/img/spotui.png"/><link rel="shortcut icon" href="/listapp/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><link rel="stylesheet" href="/listapp/css/prism.css"/><link rel="stylesheet" href="/listapp/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/listapp/"><img class="logo" src="/listapp/img/spotui.png" alt="ListApp"/><h2 class="headerTitleWithLogo">ListApp</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/listapp/docs/quickstart" target="_self">Docs</a></li><li class="siteNavGroupActive"><a href="/listapp/docs/resources" target="_self">Videos</a></li><li class="siteNavGroupActive"><a href="/listapp/docs/roadmap" target="_self">Roadmap</a></li><li class=""><a href="https://discuss.spotui.com" target="_self">Support</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Getting Started</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started</h3><ul><li class="navListItem"><a class="navItem" href="/listapp/docs/quickstart">Quick Start</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/listapp/docs/setup">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/listapp/docs/troubleshooting">Troubleshooting</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Guides</h3><ul><li class="navListItem"><a class="navItem" href="/listapp/docs/customization">Customization</a></li><li class="navListItem"><a class="navItem" href="/listapp/docs/project-structure">Project Structure</a></li><li class="navListItem"><a class="navItem" href="/listapp/docs/development">Development Guideline</a></li><li class="navListItem"><a class="navItem" href="/listapp/docs/delivery">Delivery to Stores</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">General</h3><ul><li class="navListItem"><a class="navItem" href="/listapp/docs/questions">Common Questions</a></li><li class="navListItem"><a class="navItem" href="/listapp/docs/changelog">Changelog</a></li><li class="navListItem"><a class="navItem" href="/listapp/docs/roadmap">Features &amp; Roadmap</a></li><li class="navListItem"><a class="navItem" href="/listapp/docs/resources">Resources</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docMainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Getting Started</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="1-install-wordpress-templates"></a><a href="#1-install-wordpress-templates" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Install Wordpress templates</h2>
+<p>Current ListApp template is only support following template:</p>
+<ul>
+<li><p>Listable: <a href="https://goo.gl/3ewbsX">purchase</a></p></li>
+<li><p>Listify: <a href="https://goo.gl/LKy6HL">purchase</a></p></li>
+<li><p>MyListing: <a href="https://goo.gl/Lj76N1">purchase</a></p></li>
+</ul>
+<blockquote>
+<p>You can able to test the according app from these links:</p>
+<ul>
+<li><p>listable: <a href="mailto:http://exp.host/@inspireui-demo/listapp">http://exp.host/@inspireui-demo/listapp</a></p></li>
+<li><p>Listify: <a href="mailto:https://exp.host/@inspireui-demo/listapp-listify">https://exp.host/@inspireui-demo/listapp-listify</a></p></li>
+<li><p>MyListing: <a href="https://exp.host/@inspireui-demo/listapp-mylisting">https://exp.host/@inspireui-demo/listapp-mylisting</a></p></li>
+</ul>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="2-install-wordpress-plugins"></a><a href="#2-install-wordpress-plugins" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. Install Wordpress plugins</h2>
+<h3><a class="anchor" aria-hidden="true" id="basic-plugins"></a><a href="#basic-plugins" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Basic plugins</h3>
+<ul>
+<li>listapp-manager - <a href="https://github.com/inspireui/listapp-manager">Download</a></li>
+<li>better-rest-api-featured-images - <a href="https://wordpress.org/plugins/better-rest-api-featured-images/">Download</a></li>
+<li>json-api - <a href="https://wordpress.org/plugins/json-api/">Download</a></li>
+<li>wp-rest-api-controller - <a href="https://wordpress.org/plugins/wp-rest-api-controller/">Download</a></li>
+<li>wp-rest-api-pure-taxonomies - <a href="https://wordpress.org/plugins/wp-rest-api-pure-taxonomies/">Download</a></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="premium-plugin-optional"></a><a href="#premium-plugin-optional" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Premium plugin (optional)</h3>
+<ul>
+<li>woocommerce-booking - <a href="https://woocommerce.com/products/woocommerce-bookings/">Download</a></li>
+<li>WP Job Manager Product - <a href="https://astoundify.com/products/wp-job-manager-products/">Download</a></li>
+</ul>
+<p>The preminum plugins is optional and use for the <strong>booking feature</strong></p>
+<blockquote>
+<p>The simplest way is copy all the file from <strong>Wordpress Plugins</strong> folder to your Wordpress folder: **wp-content/plugins/ **and make sure all the plugins are <strong>active</strong></p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="3-setting-wordpress"></a><a href="#3-setting-wordpress" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. Setting Wordpress</h2>
+<h3><a class="anchor" aria-hidden="true" id="permalink-setting"></a><a href="#permalink-setting" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Permalink Setting</h3>
+<p>Enable Worpdress setting: <strong>Permalink URL setting</strong>: Go to Common Setting, change the URL to <strong>Post name</strong>, this is required for the setting otherwise some images could not loading.</p>
+<h3><a class="anchor" aria-hidden="true" id="membership-registration"></a><a href="#membership-registration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Membership registration</h3>
+<p>This setting is allow every one can register on your mobile app, go to <strong>Setting</strong> and enable the option <strong>Anyone can register</strong>. <img src="/listapp/docs/assets/member.png" alt=""></p>
+<h3><a class="anchor" aria-hidden="true" id="enable-the-rest-api-controller"></a><a href="#enable-the-rest-api-controller" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Enable the Rest Api controller</h3>
+<p>This is use for the Login features from the app, go to <strong>Setting</strong> / <strong>Api Controller</strong> and set up as the screenshot.</p>
+<h4><a class="anchor" aria-hidden="true" id="listapp-docs-assets-importpng"></a><a href="#listapp-docs-assets-importpng" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><img src="/listapp/docs/assets/import.png" alt=""></h4>
+<h3><a class="anchor" aria-hidden="true" id="enable-job-listing-api"></a><a href="#enable-job-listing-api" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Enable Job Listing API</h3>
+<p>Go to  <strong>Tools/Rest API Controller</strong> this is used for active Listing endpoints, please make sure to double check the Rest API Listing after the setting, example: <a href="http://your-hosting/wp-json/wp/v2/job_listing**">http://your-hosting/wp-json/wp/v2/job_listing**</a></p>
+<p><img src="/listapp/docs/assets/plugin1.png" alt=""></p>
+<h2><a class="anchor" aria-hidden="true" id="4-config-the-mobile-app"></a><a href="#4-config-the-mobile-app" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4. Config the Mobile App</h2>
+<p><strong>Open App/common/Config.js</strong></p>
+<p>Video installing guide and config is update from this video playlist: <a href="https://www.youtube.com/playlist?list=PLcF-HiQy-jOLg0O6d9uWhOqGhvvLfx6is">https://www.youtube.com/playlist?list=PLcF-HiQy-jOLg0O6d9uWhOqGhvvLfx6is</a></p>
+<h3><a class="anchor" aria-hidden="true" id="step-1-config-to-connect-with-your-wordpress-listing-website"></a><a href="#step-1-config-to-connect-with-your-wordpress-listing-website" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 1: Config to connect with your Wordpress Listing website.</h3>
+<ul>
+<li>Type your Wordpress &amp; WooCommerce consumeKey URL.</li>
+<li>The Woocommerce key is optional if your website is already used and it is created as reserve field for later integrate the app with Woo.</li>
+</ul>
+<pre><code class="hljs css language-js">  URL: {
+    <span class="hljs-attr">root</span>: <span class="hljs-string">'http://listapp.inspireui.com'</span>,
+    <span class="hljs-attr">themes</span>: listable <span class="hljs-comment">// one of these value: listable, listify, myListing</span>
+  },
+
+  <span class="hljs-attr">WooCommerce</span>: {
+    <span class="hljs-attr">consumerKey</span>: <span class="hljs-string">'ck_0e3ca960f308cf1a1a08a44bc090dd4744167d78'</span>,
+    <span class="hljs-attr">consumerSecret</span>: <span class="hljs-string">'cs_f64148bb849212eebbae70d2262e4e38a330bb59'</span>,
+  }
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="step-2-config-app-layout-menu-social-account"></a><a href="#step-2-config-app-layout-menu-social-account" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 2: Config app layout, menu, social account.</h3>
+<p>This section is support via &quot;<strong>ListApp Manager</strong>&quot; plugin.</p>
+<ul>
+<li><strong>enable=true</strong>: use this <strong>Local</strong> value config (we suggest to use this config for better performance as your app will load faster without waiting the config from Wordpress site, but we will lost the dynamic generate layout from the form)</li>
+<li><strong>enable=false</strong>: the config above will not be used, instead it will be loaded dynamic from the website via rest API <a href="http://listapp.inspireui.com/wp-json/inspireui/v1/config">http://listapp.inspireui.com/wp-json/inspireui/v1/config</a>, please make sure the plugin is active to enable this feature.</li>
+</ul>
+<pre><code class="hljs css language-js">Local: {
+    <span class="hljs-attr">enable</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-comment">/**
+     * The main layout app homepage
+     *    1: Horizontal Layout which is loaded the below HorizonLayout
+     *    2: Vertical Layout which is used below verticalLayout
+     *    3: Mansory layout
+     */</span>
+    homepageLayout: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">verticalLayout</span>: <span class="hljs-number">2</span>,
+    <span class="hljs-comment">/**
+     * horizonLayout: show the horizontal layout config, show as the default homepage
+     *    - component: kind of components(listing, map, news)
+     *    - typeId: the type id from Listing blog, from Admin site click Listing/Types/edit the type and get tags_id from the browser URL
+     *    - categoryListingId: the category id
+     *    - row: the number of row support on the list, default is one row
+     *    - paging: blog per page from swiping, default is false
+     *    - layout: support 8 kind of layouts: banner, twoColumn, threeColumn, threeColumnHigh, list, listRight, card, flexColumn
+     *      (flexColumn is flexible column layout that you can config both width &amp; height)
+     * menu: The setting for left menu side bar
+     *    - route: should be these value: home, setting, customPage, login, map, search, bookings, userProfile, readlater
+     *    - name: the menu name 
+     *    - params: only use for the CustomPage menu, this is really cool feature as you can render the whole URL page or map to any post id
+     * color: The main color config for the app
+     * general: config the social app account link to the mobile, support Facebook, Admob, Firebase (use for login feature)
+     */</span>
+    horizontalLayout: [....],
+    <span class="hljs-attr">menu</span>: [...],
+    <span class="hljs-attr">color</span>: {...},
+    <span class="hljs-attr">general</span>: {...},
+  },
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="step-3-advance-config"></a><a href="#step-3-advance-config" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 3: Advance config</h3>
+<pre><code class="hljs css language-js">  <span class="hljs-comment">/**
+   * Step 3: Advance config
+   *    ExcludeCategories: Exclude the parent category that not show on the app, empty is mean nothing
+   *    tabBarAnimate: Default animate for tabbar
+   *    showStatusBar: option to show Status bar (true/false)
+   *    CategoryListView: default layout for category (true/false)
+   *    map: delta for map zooming
+   *    crashReport: set up crash report for your app, refer more here - https://docs.expo.io/versions/latest/guides/using-sentry#content
+   *    userProfileMenu: dynamic screen UserProfile screen menu
+
+   **/</span>
+  LeftMenuStyle: Constants.LeftMenu.scale,
+  <span class="hljs-attr">excludeCategories</span>: [<span class="hljs-number">1</span>],
+  <span class="hljs-attr">tabBarAnimate</span>: Constants.Animate.zoomIn,
+  <span class="hljs-attr">showStatusBar</span>: <span class="hljs-literal">false</span>,
+  <span class="hljs-attr">CategoryListView</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">map</span>: {
+    <span class="hljs-attr">LATITUDE_DELTA</span>: <span class="hljs-number">0.00222</span>,
+    <span class="hljs-attr">LATITUDE_DELTA_USER</span>: <span class="hljs-number">0.0922</span>,
+  },
+  <span class="hljs-attr">crashReport</span>: { },
+  <span class="hljs-attr">userProfileMenu</span>: []
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="5-running-on-expo-app-client"></a><a href="#5-running-on-expo-app-client" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5. Running on Expo app Client</h2>
+<ul>
+<li><p>Beside running the demo right on the Simulator, it's possible to run it right on your mobile phone but it should have the same wifi network (or using USB cable)</p></li>
+<li><p>Dowload the Expo Client app: <a href="https://play.google.com/store/apps/details?id=host.exp.exponent">download for Android from the Play Store</a> or <a href="https://itunes.com/apps/exponent">for iOS from the App Store</a></p></li>
+<li><p>Running by openning the Expo Client, select the Project tab menu, then you can see the list of <strong>RECENTLY IN DEVELOPMENT</strong> where content the URL point to your local URL (make sure you are login the same account on Expo Cli and Expo Client)</p></li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/listapp/docs/quickstart"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/listapp/docs/troubleshooting"><span>Next</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#1-install-wordpress-templates">1. Install Wordpress templates</a></li><li><a href="#2-install-wordpress-plugins">2. Install Wordpress plugins</a><ul class="toc-headings"><li><a href="#basic-plugins">Basic plugins</a></li><li><a href="#premium-plugin-optional">Premium plugin (optional)</a></li></ul></li><li><a href="#3-setting-wordpress">3. Setting Wordpress</a><ul class="toc-headings"><li><a href="#permalink-setting">Permalink Setting</a></li><li><a href="#membership-registration">Membership registration</a></li><li><a href="#enable-the-rest-api-controller">Enable the Rest Api controller</a></li><li><a href="#enable-job-listing-api">Enable Job Listing API</a></li></ul></li><li><a href="#4-config-the-mobile-app">4. Config the Mobile App</a><ul class="toc-headings"><li><a href="#step-1-config-to-connect-with-your-wordpress-listing-website">Step 1: Config to connect with your Wordpress Listing website.</a></li><li><a href="#step-2-config-app-layout-menu-social-account">Step 2: Config app layout, menu, social account.</a></li><li><a href="#step-3-advance-config">Step 3: Advance config</a></li></ul></li><li><a href="#5-running-on-expo-app-client">5. Running on Expo app Client</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://spotui.com" rel="noreferrer noopener"><img src="/listapp/img/spotui.png" alt="SpotUI" height="45"/><div>Efficient elegant designed mobile templates</div></a><a href="/listapp/en/blog">Home</a><a href="https://twitter.com/inspireui">Twitter</a><a href="https://facebook.com/inspireui">Facebook</a><a href="https://discuss.spot.com/">Support</a></section><section class="copyright">Copyright © 2018 InspireUI Ltd.</section></footer></div><script>window.fbAsyncInit = function() {FB.init({appId:'1809822172592320',xfbml:true,version:'v2.7'});};(function(d, s, id){var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) {return;}js = d.createElement(s); js.id = id;js.src = '//connect.facebook.net/en_US/sdk.js';fjs.parentNode.insertBefore(js, fjs);}(document, 'script','facebook-jssdk'));
+                </script><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script></body></html>
