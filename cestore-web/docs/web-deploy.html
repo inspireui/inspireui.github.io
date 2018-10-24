@@ -120,12 +120,109 @@ cezerin/cezerin:latest
 <p>By default, Cezerin is in developer mode. This means you can access API and Dashboard without access tokens.<br>
 To turn off developer mode, you need to do:</p>
 <ul>
-<li>Add access token in Dashboard or MongoDB</li>
-<li>Set SMTP server from Dashboard or in <code>config/server.js</code></li>
-<li>Remove <code>developerMode</code> from <code>config/server.js</code></li>
-<li>Remove <code>developerMode</code> from <code>config/admin.js</code></li>
-<li><code>npm run build</code> inside Cezerin container</li>
-<li><code>pm2 reload api</code> inside Cezerin container</li>
+<li><p>Add access token in Dashboard or MongoDB</p></li>
+<li><p>Set SMTP server from Dashboard or in <code>config/server.js</code></p></li>
+<li><p>Remove <code>developerMode</code> from <code>config/server.js</code></p></li>
+<li><p>Remove <code>developerMode</code> from <code>config/admin.js</code></p></li>
+<li><p><code>npm run build</code> inside Cezerin container</p></li>
+<li><p><code>pm2 reload api</code> inside Cezerin container</p></li>
 </ul>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/cestore-web/docs/web-custom-page"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/cestore-web/docs/web-database"><span>Next</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#how-to-deploy-a-cezerin-on-ubuntu-1604">How to deploy a Cezerin on Ubuntu 16.04</a><ul class="toc-headings"><li><a href="#1-create-droplet">1. Create droplet</a></li><li><a href="#2-install-docker">2. Install Docker</a></li><li><a href="#3-run-mongodb">3. Run MongoDB</a></li><li><a href="#4-run-cezerin">4. Run Cezerin</a></li><li><a href="#5-preparing-database">5. Preparing Database</a></li><li><a href="#6-setup-domain-with-cloudflare">6. Setup domain with CloudFlare</a></li><li><a href="#7-turn-off-developer-mode">7. Turn off Developer Mode</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://spotui.com" rel="noreferrer noopener"><img src="/cestore-web/img/spotui.png" alt="SpotUI" height="45"/><div>Efficient elegant designed mobile templates</div><div class="copyright-text">Copyright © 2017-2018 InspireUI Ltd.</div></a><a href="/cestore-web/en/blog">Home</a><a href="https://twitter.com/inspireui">Twitter</a><a href="https://facebook.com/inspireui">Facebook</a><a href="https://discuss.spot.com/">Support</a></section></footer></div><script>window.fbAsyncInit = function() {FB.init({appId:'1809822172592320',xfbml:true,version:'v2.7'});};(function(d, s, id){var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) {return;}js = d.createElement(s); js.id = id;js.src = '//connect.facebook.net/en_US/sdk.js';fjs.parentNode.insertBefore(js, fjs);}(document, 'script','facebook-jssdk'));
+<h3><a class="anchor" aria-hidden="true" id="8-example-nginx-config-on-production"></a><a href="#8-example-nginx-config-on-production" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>8. Example nginx config on production</h3>
+<pre><code class="hljs">server {
+        # Dynamic image resizing server
+        listen 127.0.0.1:8888;
+        server_tokens off;
+        location ~ &quot;^/resize/(?&lt;entity&gt;\w+)/(?&lt;id&gt;\w+)/(?&lt;width&gt;[1-9][0-9][0-9]{1}|[1][0-9][0-9][0-9]{1})/(?&lt;file&gt;.+)$&quot; {
+                alias /var/www/beostore/cezerin/public/content/images/$entity/$id/$file;
+                image_filter_buffer 20M;
+                image_filter_jpeg_quality 85;
+                image_filter_interlace on;
+                image_filter resize $width -;
+        }
+}
+
+# Cache rule for resized images
+proxy_cache_path /tmp/nginx-images-cache2/ levels=1:2 keys_zone=images:10m inactive=30d max_size=5g use_temp_path=off;
+
+server {
+        listen 80;
+        server_name cestore.inspireui.com;
+
+        #ssl_certificate     /etc/nginx/ssh/gd.crt;
+        #ssl_certificate_key /etc/nginx/privkey.pem;
+
+        gzip              on;
+        gzip_comp_level   2;
+        gzip_min_length   1024;
+        gzip_vary         on;
+        gzip_proxied      expired no-cache no-store private auth;
+        gzip_types        application/x-javascript application/javascript application/xml application/json text/xml text/css text$
+
+        client_body_timeout 12;
+        client_header_timeout 12;
+        reset_timedout_connection on;
+        send_timeout 10;
+        server_tokens off;
+        client_max_body_size 50m;
+
+        expires 1y;
+        access_log off;
+        log_not_found off;
+        root /var/www/beostore/cezerin/public/content;
+
+        location ~ &quot;^/images/(?&lt;entity&gt;\w+)/(?&lt;id&gt;\w+)/(?&lt;width&gt;[1-9][0-9][0-9]{1}|[1][0-9][0-9][0-9]{1})/(?&lt;file&gt;.+)$&quot; {
+                # /images/products/id/100/file.jpg &gt;&gt;&gt; Proxy to internal image resizing server
+                proxy_pass http://127.0.0.1:8888/resize/$entity/$id/$width/$file;
+                proxy_cache images;
+                proxy_cache_valid 200 30d;
+        }
+
+        location /admin {
+                alias /var/www/beostore/cezerin/public/admin/;
+                            try_files /index.html /index.html;
+        }
+
+        location /admin-assets/ {
+                alias /var/www/beostore/cezerin/public/admin-assets/;
+        }
+
+        location /assets/ {
+                alias /var/www/beostore/cezerin/theme/assets/;
+        }
+        location /sw.js {
+                root /var/www/beostore/cezerin/public/;
+        }
+
+        location /sw-toolbox.js {
+                root /var/www/beostore/cezerin/public/;
+        }
+
+        location ~ ^/(api|ajax|ws)/ {
+                # Proxy to NodeJS
+                expires off;
+                proxy_pass       http://127.0.0.1:3001;
+                proxy_set_header Host $host;
+                proxy_set_header X-Real-IP $remote_addr;
+                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+                proxy_set_header X-Forwarded-Proto $scheme;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection &quot;upgrade&quot;;
+        }
+
+        location / {
+                try_files $uri @proxy;
+        }
+
+        location @proxy {
+                # Proxy to NodeJS
+                expires off;
+                proxy_pass       http://127.0.0.1:3000;
+                proxy_set_header Host $host;
+                proxy_set_header X-Real-IP $remote_addr;
+                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+                proxy_set_header X-Forwarded-Proto $scheme;
+        }
+}
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/cestore-web/docs/web-custom-page"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/cestore-web/docs/web-database"><span>Next</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#how-to-deploy-a-cezerin-on-ubuntu-1604">How to deploy a Cezerin on Ubuntu 16.04</a><ul class="toc-headings"><li><a href="#1-create-droplet">1. Create droplet</a></li><li><a href="#2-install-docker">2. Install Docker</a></li><li><a href="#3-run-mongodb">3. Run MongoDB</a></li><li><a href="#4-run-cezerin">4. Run Cezerin</a></li><li><a href="#5-preparing-database">5. Preparing Database</a></li><li><a href="#6-setup-domain-with-cloudflare">6. Setup domain with CloudFlare</a></li><li><a href="#7-turn-off-developer-mode">7. Turn off Developer Mode</a></li><li><a href="#8-example-nginx-config-on-production">8. Example nginx config on production</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://spotui.com" rel="noreferrer noopener"><img src="/cestore-web/img/spotui.png" alt="SpotUI" height="45"/><div>Efficient elegant designed mobile templates</div><div class="copyright-text">Copyright © 2017-2018 InspireUI Ltd.</div></a><a href="/cestore-web/en/blog">Home</a><a href="https://twitter.com/inspireui">Twitter</a><a href="https://facebook.com/inspireui">Facebook</a><a href="https://discuss.spot.com/">Support</a></section></footer></div><script>window.fbAsyncInit = function() {FB.init({appId:'1809822172592320',xfbml:true,version:'v2.7'});};(function(d, s, id){var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) {return;}js = d.createElement(s); js.id = id;js.src = '//connect.facebook.net/en_US/sdk.js';fjs.parentNode.insertBefore(js, fjs);}(document, 'script','facebook-jssdk'));
                 </script><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script></body></html>
