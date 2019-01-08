@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Customize Your App · MStore Multi Vendor</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## 1. Setup MStore Multi Vendor Shop"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Customize Your App · MStore Multi Vendor"/><meta property="og:type" content="website"/><meta property="og:url" content="https://inspireui.io/mstore-mv/index.html"/><meta property="og:description" content="## 1. Setup MStore Multi Vendor Shop"/><meta property="og:image" content="https://inspireui.io/mstore-mv/img/spotui.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://inspireui.io/mstore-mv/img/spotui.png"/><link rel="shortcut icon" href="/mstore-mv/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"/><script>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Customize Your App · MStore Multi Vendor</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="-- *Last update 09/01/2018* --"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Customize Your App · MStore Multi Vendor"/><meta property="og:type" content="website"/><meta property="og:url" content="https://inspireui.io/mstore-mv/index.html"/><meta property="og:description" content="-- *Last update 09/01/2018* --"/><meta property="og:image" content="https://inspireui.io/mstore-mv/img/spotui.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://inspireui.io/mstore-mv/img/spotui.png"/><link rel="shortcut icon" href="/mstore-mv/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"/><script>
               (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
               m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -39,45 +39,76 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer docMainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Customize Your App</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="1-setup-mstore-multi-vendor-shop"></a><a href="#1-setup-mstore-multi-vendor-shop" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Setup MStore Multi Vendor Shop</h2>
-<p>Extract the download package and go top project mstore-multi-vendor folder, run following script</p>
-<p><img src="/mstore-mv/docs/assets/config-multivendor.png" alt="config-multivendor"></p>
-<p><strong>URL</strong>: is the URL of your your store</p>
+        </script></nav></div><div class="container mainContainer docMainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Customize Your App</h1></header><article><div><span><p>-- <em>Last update 09/01/2018</em> --</p>
+<p>Some section of the guide could be done by using the CeBuilder app.</p>
+<h2><a class="anchor" aria-hidden="true" id="1-setup-mstore-multi-vendor-shop"></a><a href="#1-setup-mstore-multi-vendor-shop" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Setup MStore Multi Vendor Shop</h2>
+<p>Extract the download package and go top project mstore-multi-vendor folder, and edit the <strong>src/common/AppConfig.json</strong> to update the website URL, this setting could be update via the CeBuilder:</p>
+<pre><code class="hljs">  <span class="hljs-string">"WooCommerce"</span>: {
+    <span class="hljs-string">"url"</span>: <span class="hljs-string">"http://rehub.mstore.io"</span>,
+    <span class="hljs-string">"consumerKey"</span>: <span class="hljs-string">"ck_b4eedc76dd236a78d15001321ec4c20e1e5a4196"</span>,
+    <span class="hljs-string">"consumerSecret"</span>: <span class="hljs-string">"cs_39e123766f289c5508a007c8c55ffc9388766ea7"</span>
+  },
+</code></pre>
 <ul>
-<li>consumerKey: consumerKey of your store, you can find it in Woocommerce-&gt;Setting-&gt;Advanced</li>
-<li>consumerKey: consumerSecret of your store, you can find it in Woocommerce-&gt;Setting-&gt;Advanced</li>
-<li>Click <strong>Save</strong>.</li>
+<li><p>URL: is the URL of your your store</p></li>
+<li><p>consumerKey: consumerKey of your store, you can find it in Woocommerce-&gt;Setting-&gt;Advanced</p></li>
+<li><p>consumerKey: consumerSecret of your store, you can find it in Woocommerce-&gt;Setting-&gt;Advanced</p></li>
 </ul>
-<h2><a class="anchor" aria-hidden="true" id="2-config-for-your-shop"></a><a href="#2-config-for-your-shop" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. Config for your shop</h2>
-<h3><a class="anchor" aria-hidden="true" id="change-the-homepage-horizontal-layout"></a><a href="#change-the-homepage-horizontal-layout" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Change the HomePage horizontal layout</h3>
-<p>Open src/common/Config.js then you can change the horizontal layout with quite flexible data config.</p>
+<h2><a class="anchor" aria-hidden="true" id="2-update-the-homepage-layout"></a><a href="#2-update-the-homepage-layout" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. Update the Homepage Layout</h2>
+<p>Open <strong>src/common/AppConfig.json</strong> and edit the categoryId or TagId of your site</p>
+<pre><code class="hljs"><span class="hljs-string">"HorizonLayout"</span>: [
+    { <span class="hljs-string">"tag"</span>: <span class="hljs-number">62</span>, <span class="hljs-string">"layout"</span>: <span class="hljs-number">10</span> },
+    {
+      <span class="hljs-string">"layout"</span>: <span class="hljs-number">14</span>,
+      <span class="hljs-string">"tag"</span>: <span class="hljs-number">32</span>
+    },
+    {
+      <span class="hljs-string">"name"</span>: <span class="hljs-string">"Feature Products"</span>,
+      <span class="hljs-string">"featured"</span>: true,
+      <span class="hljs-string">"image"</span>: <span class="hljs-string">""</span>,
+      <span class="hljs-string">"layout"</span>: <span class="hljs-number">6</span>
+    },
+    {
+      <span class="hljs-string">"name"</span>: <span class="hljs-string">"On Sale Products"</span>,
+      <span class="hljs-string">"onSale"</span>: true,
+      <span class="hljs-string">"image"</span>: <span class="hljs-string">""</span>,
+      <span class="hljs-string">"layout"</span>: <span class="hljs-number">2</span>
+    },
+    {
+      <span class="hljs-string">"name"</span>: <span class="hljs-string">"Electronics"</span>,
+      <span class="hljs-string">"category"</span>: <span class="hljs-number">35</span>,
+      <span class="hljs-string">"image"</span>: <span class="hljs-string">""</span>,
+      <span class="hljs-string">"layout"</span>: <span class="hljs-number">8</span>
+    },
+    {
+      <span class="hljs-string">"name"</span>: <span class="hljs-string">"Digital"</span>,
+      <span class="hljs-string">"category"</span>: <span class="hljs-number">34</span>,
+      <span class="hljs-string">"image"</span>: <span class="hljs-string">""</span>,
+      <span class="hljs-string">"layout"</span>: <span class="hljs-number">1</span>
+    }
+  ],
+</code></pre>
+<p>The <strong>layout</strong> should be the number that according to these values:</p>
+<pre><code class="hljs"><span class="hljs-symbol">Layout:</span> {
+<span class="hljs-symbol">    card:</span> <span class="hljs-number">1</span>,
+<span class="hljs-symbol">    twoColumn:</span> <span class="hljs-number">2</span>,
+<span class="hljs-symbol">    simple:</span> <span class="hljs-number">3</span>,
+<span class="hljs-symbol">    list:</span> <span class="hljs-number">4</span>,
+<span class="hljs-symbol">    advance:</span> <span class="hljs-number">5</span>,
+<span class="hljs-symbol">    threeColumn:</span> <span class="hljs-number">6</span>,
+<span class="hljs-symbol">    horizon:</span> <span class="hljs-number">7</span>,
+<span class="hljs-symbol">    twoColumnHigh:</span> <span class="hljs-number">8</span>,
+<span class="hljs-symbol">    miniBanner:</span> <span class="hljs-number">9</span>,
+<span class="hljs-symbol">    Banner:</span> <span class="hljs-number">10</span>,
+<span class="hljs-symbol">    BannerPromo:</span> <span class="hljs-number">11</span>,
+<span class="hljs-symbol">    circle:</span> <span class="hljs-number">12</span>,
+<span class="hljs-symbol">    BannerHigh:</span> <span class="hljs-number">13</span>,
+<span class="hljs-symbol">    BannerSale:</span> <span class="hljs-number">14</span>,
+  },
+</code></pre>
 <blockquote>
-<ul>
-<li><strong>name</strong>: the label display for horizontal layout.</li>
-<li><strong>tag</strong>: the tag id for the layout category: the category id for the layout (we can filter the content for both tag and category)</li>
-<li><strong>layout</strong>: Support varies layout UI:
-<ul>
-<li><strong>Banner</strong>: Constants.Layout.miniBanner</li>
-<li><strong>Three column view</strong>: Constants.Layout.threeColumn</li>
-<li><strong>Two column view</strong>: Constants.Layout.twoColumn</li>
-<li><strong>Two column with higher UI</strong>: Constants.Layout.twoColumnHigh</li>
-<li><strong>Card view</strong>: Constants.Layout.car</li>
-</ul></li>
-<li><strong>image</strong>: the banner image to show on top when view all the post Let me explain more about this config</li>
-</ul>
+<p>This setting could be update via the CeBuilder:</p>
 </blockquote>
-<h3><a class="anchor" aria-hidden="true" id="example-showing-the-content-as-banner-view"></a><a href="#example-showing-the-content-as-banner-view" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example: showing the content as Banner View</h3>
-<pre><code class="hljs">{<span class="hljs-attribute">tag</span>: <span class="hljs-number">273</span>, paging: true, layout: Constants.Layout.miniBanner}
-</code></pre>
-<p>This mean show all recent post which have tag id:273, show as the per page with sticky support via paging:true, this is show as the miniBanner (use for banner only so we will not display the name here)</p>
-<p><img src="/mstore-mv/docs/assets/tags-mv.png" alt="tags-mv"></p>
-<h3><a class="anchor" aria-hidden="true" id="example-showing-the-content-as-3-column-view"></a><a href="#example-showing-the-content-as-3-column-view" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example: showing the content as 3 column view</h3>
-<pre><code class="hljs">{name: <span class="hljs-string">"Feature Products"</span>, category: <span class="hljs-number">21</span> , image: Images<span class="hljs-selector-class">.Banner</span><span class="hljs-selector-class">.Feature</span>, layout: Constants<span class="hljs-selector-class">.Layout</span><span class="hljs-selector-class">.threeColumn</span>},
-</code></pre>
-<p>Show the category id:21 with label 'feature products'</p>
-<p>Show the banner when click show all: Images.Banner.Feature</p>
-<p>The horizon layout is show as three column by support Constants.Layout.threeColumn</p>
-<p><img src="/mstore-mv/docs/assets/3-columns.png" alt="3-columns"></p>
 <h2><a class="anchor" aria-hidden="true" id="3-change-the-logo-and-icons-splash-screen"></a><a href="#3-change-the-logo-and-icons-splash-screen" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. Change the logo and Icons, splash screen</h2>
 <p>Open src/common/config.js to map your news image Logo and icon file.</p>
 <pre><code class="hljs">LogoImage: <span class="hljs-built_in">require</span>(<span class="hljs-string">'@images/new_logo.png'</span>),
@@ -85,6 +116,9 @@ LogoWithText: <span class="hljs-built_in">require</span>(<span class="hljs-strin
 LogoLoading: <span class="hljs-built_in">require</span>(<span class="hljs-string">'@images/logo.png'</span>),
 </code></pre>
 <p>If you need to change other image files please locate to <strong>src/common/Images.js</strong></p>
+<blockquote>
+<p>This setting could be update via the CeBuilder:</p>
+</blockquote>
 <h2><a class="anchor" aria-hidden="true" id="4-change-the-app-color"></a><a href="#4-change-the-app-color" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4. Change the App Color</h2>
 <p>Open /src/Common/Color.js file in project.</p>
 <p>You could change most of components color in Color section.</p>
@@ -100,6 +134,9 @@ LogoLoading: <span class="hljs-built_in">require</span>(<span class="hljs-string
 ...
 };
 </code></pre>
+<blockquote>
+<p>The mainColor is moved to src/common/AppConfig.json file which can be change via App Builder</p>
+</blockquote>
 <h2><a class="anchor" aria-hidden="true" id="5-add-payment-gateway"></a><a href="#5-add-payment-gateway" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5. Add payment Gateway</h2>
 <p>As the app is already integrated with multi payment gateway, once you config it run success on the website, it can be run smoothly from the app, add new payment key value and the image URL to enable it:</p>
 <pre><code class="hljs css language-javascript">Payments: {
@@ -114,5 +151,5 @@ LogoLoading: <span class="hljs-built_in">require</span>(<span class="hljs-string
 <li><p>Dowload the Expo Client app: <a href="https://play.google.com/store/apps/details?id=host.exp.exponent">download for Android from the Play Store</a> or <a href="https://itunes.com/apps/exponent">for iOS from the App Store</a></p></li>
 <li><p>Running by openning the Expo Client, select the Project tab menu, then you can see the list of <strong>RECENTLY IN DEVELOPMENT</strong> where content the URL point to your local URL (make sure you are login the same account on Expo Cli)</p></li>
 </ul>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/mstore-mv/docs/configwordpress"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/mstore-mv/docs/project-structure"><span>Next</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#1-setup-mstore-multi-vendor-shop">1. Setup MStore Multi Vendor Shop</a></li><li><a href="#2-config-for-your-shop">2. Config for your shop</a><ul class="toc-headings"><li><a href="#change-the-homepage-horizontal-layout">Change the HomePage horizontal layout</a></li><li><a href="#example-showing-the-content-as-banner-view">Example: showing the content as Banner View</a></li><li><a href="#example-showing-the-content-as-3-column-view">Example: showing the content as 3 column view</a></li></ul></li><li><a href="#3-change-the-logo-and-icons-splash-screen">3. Change the logo and Icons, splash screen</a></li><li><a href="#4-change-the-app-color">4. Change the App Color</a></li><li><a href="#5-add-payment-gateway">5. Add payment Gateway</a></li><li><a href="#6-running-on-expo-app-client">6. Running on Expo app Client</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://spotui.com" rel="noreferrer noopener"><img src="/mstore-mv/img/spotui.png" alt="SpotUI" height="45"/><div>Efficient elegant designed mobile templates</div><div class="copyright-text">Copyright © 2018-2018 InspireUI Ltd.</div></a><a href="/mstore-mv/en/blog">Home</a><a href="https://twitter.com/inspireui">Twitter</a><a href="https://facebook.com/inspireui">Facebook</a><a href="https://discuss.spot.com/">Support</a></section></footer></div><script>window.fbAsyncInit = function() {FB.init({appId:'1809822172592320',xfbml:true,version:'v2.7'});};(function(d, s, id){var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) {return;}js = d.createElement(s); js.id = id;js.src = '//connect.facebook.net/en_US/sdk.js';fjs.parentNode.insertBefore(js, fjs);}(document, 'script','facebook-jssdk'));
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/mstore-mv/docs/configwordpress"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/mstore-mv/docs/project-structure"><span>Next</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#1-setup-mstore-multi-vendor-shop">1. Setup MStore Multi Vendor Shop</a></li><li><a href="#2-update-the-homepage-layout">2. Update the Homepage Layout</a></li><li><a href="#3-change-the-logo-and-icons-splash-screen">3. Change the logo and Icons, splash screen</a></li><li><a href="#4-change-the-app-color">4. Change the App Color</a></li><li><a href="#5-add-payment-gateway">5. Add payment Gateway</a></li><li><a href="#6-running-on-expo-app-client">6. Running on Expo app Client</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://spotui.com" rel="noreferrer noopener"><img src="/mstore-mv/img/spotui.png" alt="SpotUI" height="45"/><div>Efficient elegant designed mobile templates</div><div class="copyright-text">Copyright © 2018-2019 InspireUI Ltd.</div></a><a href="/mstore-mv/en/blog">Home</a><a href="https://twitter.com/inspireui">Twitter</a><a href="https://facebook.com/inspireui">Facebook</a><a href="https://discuss.spot.com/">Support</a></section></footer></div><script>window.fbAsyncInit = function() {FB.init({appId:'1809822172592320',xfbml:true,version:'v2.7'});};(function(d, s, id){var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) {return;}js = d.createElement(s); js.id = id;js.src = '//connect.facebook.net/en_US/sdk.js';fjs.parentNode.insertBefore(js, fjs);}(document, 'script','facebook-jssdk'));
                 </script><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script></body></html>
