@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="//ghost.local:8000/sitemap.xsl"?><sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><sitemap><loc>http://ghost.local:8000/sitemap-pages.xml</loc><lastmod>2019-10-26T10:04:55.784Z</lastmod></sitemap></sitemapindex>
+=======
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="//ghost.local:8000/sitemap.xsl"?><sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><sitemap><loc>http://ghost.local:8000/sitemap-pages.xml</loc><lastmod>2019-10-13T05:56:09.451Z</lastmod></sitemap></sitemapindex>
+>>>>>>> bdd2c798a60de7d712175eb756cf11f673a84b6e
